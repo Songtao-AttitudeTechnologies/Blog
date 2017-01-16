@@ -28,4 +28,7 @@ Route::get('/', function () {
 
 Route::group(['middleware' => ['web']], function () {
     //
+    Route::get('/', 'IndexController@index');
+    Route::get('admin/login', 'Admin\LoginController@login');
+
 });
