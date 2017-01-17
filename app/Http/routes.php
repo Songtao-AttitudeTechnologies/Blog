@@ -26,21 +26,25 @@ Route::get('/', function () {
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
+Route::group(['middleware' => ['web','admin.login'],'prefix'=>'admin','namespace'=>'Admin'], function () {
     //
-    Route::get('/', 'IndexController@index');
-    Route::any('admin/login', 'Admin\LoginController@login');
-    Route::get('admin/code', 'Admin\LoginController@code');
-    Route::get('admin/getcode', 'Admin\LoginController@getCode');
-    Route::any('admin/crypt', 'Admin\LoginController@encrypt');
-    Route::any('admin/info', 'Admin\IndexController@info');
-    Route::any('admin/index', 'Admin\IndexController@index');
-    Route::any('admin/add', 'Admin\IndexController@add');
-    Route::any('admin/listPage', 'Admin\IndexController@listPage');
-    Route::any('admin/tab', 'Admin\IndexController@tab');
-    Route::any('admin/img', 'Admin\IndexController@img');
-    Route::any('admin/element', 'Admin\IndexController@element');
-    Route::any('admin/pass', 'Admin\IndexController@pass');
-
+    Route::any('crypt', 'LoginController@encrypt');
+    Route::any('info', 'IndexController@info');
+    Route::any('index', 'IndexController@index');
+    Route::any('add', 'IndexController@add');
+    Route::any('listPage', 'IndexController@listPage');
+    Route::any('tab', 'IndexController@tab');
+    Route::any('img', 'IndexController@img');
+    Route::any('element', 'IndexController@element');
+    Route::any('pass', 'IndexController@pass');
+    Route::get('logout', 'LoginController@logout');
 
 });
+
+Route::group(['middleware' => ['web'], 'prefix'=>'admin','namespace'=>'Admin'], function () {
+    //
+    Route::any('login', 'LoginController@login');
+    Route::get('code', 'LoginController@code');
+    Route::get('getcode', 'LoginController@getCode');
+});
+

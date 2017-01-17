@@ -22,7 +22,7 @@
 			<ul>
 				<li>Welcome：admin</li>
 				<li><a href="{{url('admin/pass')}}" target="main">Reset Password</a></li>
-				<li><a href="#">Logout</a></li>
+				<li><a href="{{url('admin/logout')}}">Logout</a></li>
 			</ul>
 		</div>
 	</div>
