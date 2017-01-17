@@ -4,11 +4,12 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="{{asset('resources/views/admin/style/css/ch-ui.admin.css')}}">
 	<link rel="stylesheet" href="{{asset('resources/views/admin/style/font/css/font-awesome.min.css')}}">
+	<title>Login - CMS</title>
 </head>
 <body style="background:#F3F3F4;">
 	<div class="login_box">
 		<h1>Blog</h1>
-		<h2>Wlecom to Content Management System</h2>
+		<h2>Content Management System</h2>
 		<div class="form">
 
 			@if(session('msg'))
@@ -33,11 +34,11 @@
 						<img src="{{url('/admin/code')}}" alt="" onclick="this.src='{{url('/admin/code')}}?'+Math.random()">
 					</li>
 					<li>
-						<input type="submit" value="立即登陆"/>
+						<input type="submit" value="Log Me In"/>
 					</li>
 				</ul>
 			</form>
-			<p><a href="#">返回首页</a> &copy; 2016 Powered by <a href="http://www.chenhua.club" target="_blank">http://www.chenhua.club</a></p>
+			<p><a href="#">Home</a> &copy; 2016 Powered by <br/><a href="http://www.attitudetech.ie" target="_blank">Attitude Technologies</a></p>
 		</div>
 	</div>
 </body>

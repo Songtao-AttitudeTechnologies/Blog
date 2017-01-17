@@ -33,6 +33,14 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('admin/code', 'Admin\LoginController@code');
     Route::get('admin/getcode', 'Admin\LoginController@getCode');
     Route::any('admin/crypt', 'Admin\LoginController@encrypt');
+    Route::any('admin/info', 'Admin\IndexController@info');
+    Route::any('admin/index', 'Admin\IndexController@index');
+    Route::any('admin/add', 'Admin\IndexController@add');
+    Route::any('admin/listPage', 'Admin\IndexController@listPage');
+    Route::any('admin/tab', 'Admin\IndexController@tab');
+    Route::any('admin/img', 'Admin\IndexController@img');
+    Route::any('admin/element', 'Admin\IndexController@element');
+    Route::any('admin/pass', 'Admin\IndexController@pass');
 
 
 });
