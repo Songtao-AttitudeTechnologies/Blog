@@ -32,6 +32,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::any('admin/login', 'Admin\LoginController@login');
     Route::get('admin/code', 'Admin\LoginController@code');
     Route::get('admin/getcode', 'Admin\LoginController@getCode');
+    Route::any('admin/crypt', 'Admin\LoginController@encrypt');
 
 
 });
