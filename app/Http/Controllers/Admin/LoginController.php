@@ -35,7 +35,9 @@ class LoginController extends CommonController
                     $system_user_pass = $this->decrypt($user->user_pass);
 
                     if ($input_user_pass == $system_user_pass) {
-                        return view('admin.index');
+
+                        session(['user'=>$user]);
+                        return redirect('admin/index');
                     } else {
                         return back()->with('msg', 'Error: Incorrect Password');
                     }
@@ -45,6 +47,8 @@ class LoginController extends CommonController
             }
 
         } else {
+
+            session(['user'=>null]);
             return view('admin.login');
         }
     }
@@ -78,5 +82,11 @@ class LoginController extends CommonController
     {
         $res = Crypt::decrypt($str);
         return $res;
+    }
+
+    public function logout(){
+
+        session(['user'=>null]);
+        return redirect('admin/login');
     }
 }

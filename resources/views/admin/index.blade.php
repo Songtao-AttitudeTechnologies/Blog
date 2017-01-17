@@ -6,22 +6,23 @@
 	<link rel="stylesheet" href="{{asset('resources/views/admin/style/font/css/font-awesome.min.css')}}">
 	<script type="text/javascript" src="{{asset('resources/views/admin/style/js/jquery.js')}}"></script>
     <script type="text/javascript" src="{{asset('resources/views/admin/style/js/ch-ui.admin.js')}}"></script>
+	<title>Home - CMS</title>
 </head>
 <body>
 	<!--头部 开始-->
 	<div class="top_box">
 		<div class="top_left">
-			<div class="logo">后台管理模板</div>
+			<div class="logo">CMS</div>
 			<ul>
-				<li><a href="#" class="active">首页</a></li>
-				<li><a href="#">管理页</a></li>
+				<li><a href="{{url('admin/index')}}" class="active">HOME</a></li>
+				<li><a href="#">ADMIN</a></li>
 			</ul>
 		</div>
 		<div class="top_right">
 			<ul>
-				<li>管理员：admin</li>
-				<li><a href="pass.html" target="main">修改密码</a></li>
-				<li><a href="#">退出</a></li>
+				<li>Welcome：admin</li>
+				<li><a href="{{url('admin/pass')}}" target="main">Reset Password</a></li>
+				<li><a href="{{url('admin/logout')}}">Logout</a></li>
 			</ul>
 		</div>
 	</div>
@@ -31,28 +32,28 @@
 	<div class="menu_box">
 		<ul>
             <li>
-            	<h3><i class="fa fa-fw fa-clipboard"></i>常用操作</h3>
+            	<h3><i class="fa fa-fw fa-clipboard"></i>Quick Link</h3>
                 <ul class="sub_menu">
-                    <li><a href="add.html" target="main"><i class="fa fa-fw fa-plus-square"></i>添加页</a></li>
-                    <li><a href="list.html" target="main"><i class="fa fa-fw fa-list-ul"></i>列表页</a></li>
-                    <li><a href="tab.html" target="main"><i class="fa fa-fw fa-list-alt"></i>tab页</a></li>
-                    <li><a href="img.html" target="main"><i class="fa fa-fw fa-image"></i>图片列表</a></li>
+                    <li><a href="{{url('admin/add')}}" target="main"><i class="fa fa-fw fa-plus-square"></i>Add Page</a></li>
+                    <li><a href="{{url('admin/listPage')}}" target="main"><i class="fa fa-fw fa-list-ul"></i>List Page</a></li>
+                    <li><a href="{{url('admin/tab')}}" target="main"><i class="fa fa-fw fa-list-alt"></i>Tab Page</a></li>
+                    <li><a href="{{url('admin/img')}}" target="main"><i class="fa fa-fw fa-image"></i>Images List</a></li>
                 </ul>
             </li>
             <li>
-            	<h3><i class="fa fa-fw fa-cog"></i>系统设置</h3>
+            	<h3><i class="fa fa-fw fa-cog"></i>Settings</h3>
                 <ul class="sub_menu">
-                    <li><a href="#" target="main"><i class="fa fa-fw fa-cubes"></i>网站配置</a></li>
-                    <li><a href="#" target="main"><i class="fa fa-fw fa-database"></i>备份还原</a></li>
+                    <li><a href="#" target="main"><i class="fa fa-fw fa-cubes"></i>System Setting</a></li>
+                    <li><a href="#" target="main"><i class="fa fa-fw fa-database"></i>System Backup</a></li>
                 </ul>
             </li>
             <li>
-            	<h3><i class="fa fa-fw fa-thumb-tack"></i>工具导航</h3>
+            	<h3><i class="fa fa-fw fa-thumb-tack"></i>Tool Bar</h3>
                 <ul class="sub_menu">
-                    <li><a href="http://www.yeahzan.com/fa/facss.html" target="main"><i class="fa fa-fw fa-font"></i>图标调用</a></li>
-                    <li><a href="http://hemin.cn/jq/cheatsheet.html" target="main"><i class="fa fa-fw fa-chain"></i>Jquery手册</a></li>
-                    <li><a href="http://tool.c7sky.com/webcolor/" target="main"><i class="fa fa-fw fa-tachometer"></i>配色板</a></li>
-                    <li><a href="element.html" target="main"><i class="fa fa-fw fa-tags"></i>其他组件</a></li>
+                    <li><a href="http://www.yeahzan.com/fa/facss.html" target="main"><i class="fa fa-fw fa-font"></i>Icon Lib</a></li>
+                    <li><a href="http://hemin.cn/jq/cheatsheet.html" target="main"><i class="fa fa-fw fa-chain"></i>Jquery Doc</a></li>
+                    <li><a href="http://tool.c7sky.com/webcolor/" target="main"><i class="fa fa-fw fa-tachometer"></i>Color Board</a></li>
+                    <li><a href="{{url('admin/element')}}" target="main"><i class="fa fa-fw fa-tags"></i>Other Tools</a></li>
                 </ul>
             </li>
         </ul>
@@ -61,13 +62,13 @@
 
 	<!--主体部分 开始-->
 	<div class="main_box">
-		<iframe src="info.html" frameborder="0" width="100%" height="100%" name="main"></iframe> 
+		<iframe src="{{url('admin/info')}}" frameborder="0" width="100%" height="100%" name="main"></iframe>
 	</div>
 	<!--主体部分 结束-->
 
 	<!--底部 开始-->
 	<div class="bottom_box">
-		CopyRight © 2016. Powered By <a href="http://www.chenhua.club">http://www.chenhua.club</a>.
+		CopyRight © 2016. Powered By <a href="http://www.attitudetech.ie">Attitude Technologies</a>.
 	</div>
 	<!--底部 结束-->
 </body>
