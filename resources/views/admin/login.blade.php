@@ -11,11 +11,8 @@
 		<h1>Blog</h1>
 		<h2>Content Management System</h2>
 		<div class="form">
-
 			@if(session('msg'))
-
 				<p style="color:red">{{session('msg')}}</p>
-
 				@endif
 			<form action="#" method="post">
 				{{csrf_field()}}
