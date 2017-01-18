@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="{{asset('resources/views/admin/style/css/ch-ui.admin.css')}}">
-	<link rel="stylesheet" href="{{asset('resources/views/admin/style/font/css/font-awesome.min.css')}}">
-	<script type="text/javascript" src="{{asset('resources/views/admin/style/js/jquery.js')}}"></script>
-    <script type="text/javascript" src="{{asset('resources/views/admin/style/js/ch-ui.admin.js')}}"></script>
-	<title>Home - CMS</title>
-</head>
-<body>
+@extends('layouts.admin')
+@section('content')
 	<!--头部 开始-->
 	<div class="top_box">
 		<div class="top_left">
@@ -71,5 +62,4 @@
 		CopyRight © 2016. Powered By <a href="http://www.attitudetech.ie">Attitude Technologies</a>.
 	</div>
 	<!--底部 结束-->
-</body>
-</html>
+@endsection

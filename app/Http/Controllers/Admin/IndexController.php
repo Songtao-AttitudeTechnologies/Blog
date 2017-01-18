@@ -9,7 +9,16 @@ use Illuminate\Support\Facades\DB;
 
 class IndexController extends CommonController
 {
-    //
+    //reset admin password
+    public function pass(){
+
+
+
+
+
+        return view('admin.pass');
+    }
+
     public function index(){
         return view('admin.index');
     }
@@ -36,9 +45,5 @@ class IndexController extends CommonController
 
     public function element(){
         return view('admin.element');
-    }
-
-    public function pass(){
-        return view('admin.pass');
     }
 }
