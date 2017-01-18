@@ -28,9 +28,8 @@ Route::get('/', function () {
 
 Route::group(['middleware' => ['web','admin.login'],'prefix'=>'admin','namespace'=>'Admin'], function () {
     //
-    Route::any('crypt', 'LoginController@encrypt');
-    Route::any('info', 'IndexController@info');
-    Route::any('index', 'IndexController@index');
+    Route::get('info', 'IndexController@info');
+    Route::get('index', 'IndexController@index');
     Route::any('add', 'IndexController@add');
     Route::any('listPage', 'IndexController@listPage');
     Route::any('tab', 'IndexController@tab');
