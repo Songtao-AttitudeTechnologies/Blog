@@ -6,7 +6,6 @@ use App\Http\Model\Admin\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Input;
 
 require_once 'resources/org/code/Code.class.php';
@@ -68,20 +67,6 @@ class LoginController extends CommonController
         $code = new \Code();
         $val = $code->get();
         return $val;
-    }
-
-    //encrypt
-    public function encrypt($str)
-    {
-        $res = Crypt::encrypt($str);
-        return $res;
-    }
-
-    //decrypt
-    public function decrypt($str)
-    {
-        $res = Crypt::decrypt($str);
-        return $res;
     }
 
     public function logout(){
