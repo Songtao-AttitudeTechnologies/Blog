@@ -25,7 +25,7 @@
 
 <div class="result_wrap">
     <form method="post" onsubmit="return changePass()">
-        <input type="hidden" name="_token" value="X25wGVjFqDXvq7vAUAJTjTAHfX0RhkGufucRdzGh">
+        {{csrf_field()}}
         <table class="add_tab">
             <tbody>
             <tr>
